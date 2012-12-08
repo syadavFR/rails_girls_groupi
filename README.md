@@ -1,4 +1,4 @@
 rails_girls_groupi
 ==================
 
-RaIls girls group I
+Rails girls group I
