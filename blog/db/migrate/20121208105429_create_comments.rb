@@ -7,7 +7,9 @@ class CreateComments < ActiveRecord::Migration
       t.timestamps
 
       t.references :user
+      t.references :post
     end
     add_index :comments, :user_id
+    add_index :comments, :post_id
   end
 end
