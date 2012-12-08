@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20121208105429) do
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "posts", :force => true do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.string   "description"
     t.date     "created_date"
@@ -33,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20121208105429) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "first_name"

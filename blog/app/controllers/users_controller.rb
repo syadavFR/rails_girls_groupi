@@ -80,4 +80,15 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def showPosts
+   @user = User.find(params[:id])
+   @posts = @user.posts
+
+      respond_to do |format|
+          format.json { render json: @posts }
+      end
+  end
 end
+   
