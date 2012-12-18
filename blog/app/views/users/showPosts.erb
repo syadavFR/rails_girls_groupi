@@ -1,0 +1,9 @@
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.description %></td>
+    <td><%= post.created_date %></td>
+    <td><%= post.modified_date %></td>
+    <td> <%= post.user_id %></td>
+   </tr>
+<% end %>

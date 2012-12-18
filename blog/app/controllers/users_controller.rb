@@ -88,6 +88,7 @@ class UsersController < ApplicationController
 
       respond_to do |format|
           format.json { render json: @posts }
+	  format.html  # showposts.html.erb 
       end
   end
 end
